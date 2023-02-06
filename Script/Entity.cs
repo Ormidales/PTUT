@@ -15,6 +15,19 @@ public partial class Entity : CharacterBody2D
 
 
 
+	public override void _PhysicsProcess(double delta) {
+		var vel = Velocity;
+
+		vel += Inert;
+
+		Velocity = vel;
+
+
+		Inert*=0.8f;
+	}
+
+
+
 	public Vector2 Inert {get;set;}
 
 	public int Health {get;set;}
