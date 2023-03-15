@@ -10,6 +10,8 @@ public class Entity : MonoBehaviour
 
     public int HurtTime {get;set;}
 
+    public bool Flipped {get;set;}
+
     public GameObject Object {get;private set;}
 
 

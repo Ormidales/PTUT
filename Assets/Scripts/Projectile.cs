@@ -18,6 +18,10 @@ public class Projectile : MonoBehaviour
         body = GetComponent<Rigidbody2D>();    
     }
 
+    void OnCollisionEnter() {
+
+    }
+
     // Update is called once per frame
     void Update()
     {
