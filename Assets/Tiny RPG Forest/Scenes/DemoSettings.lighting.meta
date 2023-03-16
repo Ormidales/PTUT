@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 0ed7f9af7ca0bf842b5fc0aa74614a77
+=======
+guid: a0819c53305196742a57cd93b23dc053
+>>>>>>> fabrice
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 4890085278179872738

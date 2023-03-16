@@ -94,6 +94,7 @@
       },
       "url": "https://packages.unity.com"
     },
+<<<<<<< HEAD
     "com.unity.cinemachine": {
       "version": "2.8.9",
       "depth": 0,
@@ -105,6 +106,10 @@
     },
     "com.unity.collab-proxy": {
       "version": "2.0.1",
+=======
+    "com.unity.collab-proxy": {
+      "version": "2.0.0",
+>>>>>>> fabrice
       "depth": 0,
       "source": "registry",
       "dependencies": {},
