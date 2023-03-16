@@ -23,6 +23,9 @@ public class PlayerMovement : Entity
         rb = GetComponent<Rigidbody2D>();
 
 
+        print(GenerativeGrammar.Test());
+
+
 
     }
 
