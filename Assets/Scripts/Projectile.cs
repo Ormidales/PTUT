@@ -10,6 +10,13 @@ public class Projectile : MonoBehaviour
     [field:SerializeField]
     public float Speed {get;set;}= 1.0f;
 
+
+
+
+    [field:SerializeField]
+    public Vector3 Direction {get;set;}= Vector3.up;
+
+
     Rigidbody2D body;
 
     // Start is called before the first frame update
@@ -24,12 +31,18 @@ public class Projectile : MonoBehaviour
         collision.gameObject.GetComponent<Entity>().Damage(5,null);
     }
 
+
+
     // Update is called once per frame
     void Update()
     {
 
-        var vec = Quaternion.Euler(0,0,gameObject.transform.rotation.z) * new Vector2(0,Speed);
-        print(gameObject.transform.rotation.z);
-        body.MovePosition(body.position + new Vector2(vec.x,vec.y));
+        //var vec = Quaternion.Euler(0,0,gameObject.transform.rotation.z) * new Vector2(0,Speed);
+        //print(gameObject.transform.rotation.z);
+        
+        
+        
+        
+        body.MovePosition(body.position + new Vector2(Direction.x,Direction.y));
     }
 }

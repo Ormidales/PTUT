@@ -63,6 +63,11 @@ public class PlayerMovement : Entity
     }
 
 
+    public override void Die() {
+        throw new System.Exception();
+    }
+
+
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);

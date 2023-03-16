@@ -33,8 +33,20 @@ public class Entity : MonoBehaviour
 
 
     public virtual void Damage(int value,Entity from) {
-
+        health -= value;
+        if(health <= 0) {
+            Die();
+        }
     }
+
+
+        public virtual void Die() {
+
+            Destroy(this.gameObject);
+            
+
+        }
+
 
     public virtual void Tick() {
 
