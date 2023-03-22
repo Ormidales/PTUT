@@ -11,14 +11,31 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
 
     Vector2 movement;
+    public static PlayerMovement instance;
+    private bool movementActive=true;
+    
+    private void Awake()
+    {
+        if (instance!=null)
+        {
+            UnityEngine.Debug.LogWarning("Only one instance of PlayerMovement is expected !");
+            return;
+        }
+        instance = this;
+    }
 
-
-
+    public void setMovementActive(bool boolean)
+    {
+        movementActive=boolean;
+    }
     // Update is called once per frame
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        if (movementActive)
+        {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+        } 
     }
 
 
