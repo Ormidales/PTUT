@@ -159,6 +159,7 @@ MonoBehaviour:
   <HealthTop>k__BackingField: 100
   moveSpeed: 4
   rb: {fileID: 0}
+  bullet: {fileID: 1389948564880281968, guid: ff4c15e3733524ba6a0d582f2ad56916, type: 3}
 --- !u!50 &116591577
 Rigidbody2D:
   serializedVersion: 4

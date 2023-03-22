@@ -16,6 +16,9 @@ public class PlayerMovement : Entity
     SpriteRenderer sprite;
 
 
+    public GameObject bullet;
+
+
     protected override void Start()
     {
         base.Start();
@@ -39,6 +42,17 @@ public class PlayerMovement : Entity
         movement.y = Input.GetAxisRaw("Vertical");
 
 
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+
+
+            Instantiate(bullet, this.gameObject.transform.position + new Vector3(Flipped ? 1 : -1, 0, 0), Quaternion.identity).GetComponent<Projectile>().Direction = new Vector3(Flipped ? 1 : -1,0,0) ;
+
+
+        }
+
+
         if (movement.sqrMagnitude >= 1)
         {
             //sprite.flipX = movement.x < 0f;
@@ -50,11 +64,15 @@ public class PlayerMovement : Entity
             if (flip != Flipped)
             {
 
-                transform.localScale = new Vector3(sc.x*-1, sc.y, sc.z);
+                transform.localScale = new Vector3(sc.x * -1, sc.y, sc.z);
 
                 Flipped = flip;
 
             }
+
+
+
+
 
 
 
@@ -66,7 +84,8 @@ public class PlayerMovement : Entity
     }
 
 
-    public override void Die() {
+    public override void Die()
+    {
         throw new System.Exception();
     }
 

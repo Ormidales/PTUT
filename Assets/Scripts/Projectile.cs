@@ -8,13 +8,13 @@ public class Projectile : MonoBehaviour
 
 
     [field:SerializeField]
-    public float Speed {get;set;}= 1.0f;
+    public float Speed {get;set;}= 0.1f;
 
 
 
 
     [field:SerializeField]
-    public Vector3 Direction {get;set;}= Vector3.up;
+    public Vector3 Direction {get;set;}= Vector3.left;
 
 
     Rigidbody2D body;
@@ -43,6 +43,6 @@ public class Projectile : MonoBehaviour
         
         
         
-        body.MovePosition(body.position + new Vector2(Direction.x,Direction.y));
+        body.MovePosition(body.position + new Vector2(Direction.x,Direction.y)*Speed);
     }
 }
