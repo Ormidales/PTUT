@@ -9,10 +9,10 @@ public class PlayerMovement : MonoBehaviour
 
     public float moveSpeed = 4f;
     public Rigidbody2D rb;
+    public BoxCollider2D playerCollider;
 
     Vector2 movement;
     public static PlayerMovement instance;
-    private bool movementActive=true;
     
     private void Awake()
     {
@@ -24,18 +24,11 @@ public class PlayerMovement : MonoBehaviour
         instance = this;
     }
 
-    public void setMovementActive(bool boolean)
-    {
-        movementActive=boolean;
-    }
     // Update is called once per frame
     void Update()
     {
-        if (movementActive)
-        {
-            movement.x = Input.GetAxisRaw("Horizontal");
-            movement.y = Input.GetAxisRaw("Vertical");
-        } 
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
     }
 
 

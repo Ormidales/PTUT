@@ -10,23 +10,7 @@ public class ChaseAI : MonoBehaviour
 
     private float distance;
 
-    public static ChaseAI instance;
-    private bool chaseActive=true;
-    
-    private void Awake()
-    {
-        if (instance!=null)
-        {
-            UnityEngine.Debug.LogWarning("Only one instance of ChaseAI is expected !");
-            return;
-        }
-        instance = this;
-    }
 
-    public void setChaseActive(bool boolean)
-    {
-        chaseActive=boolean;
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -37,14 +21,12 @@ public class ChaseAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (chaseActive)
-        {
-            distance = Vector2.Distance(transform.position, target.transform.position);
+  
+        distance = Vector2.Distance(transform.position, target.transform.position);
 
-            var direction = target.transform.position - transform.position;
+        var direction = target.transform.position - transform.position;
 
-            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
-        }
+        transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
         
     }
 

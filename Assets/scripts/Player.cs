@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public float invicibilityFlash=0.1f;
     public float invicibilityTime=2f;
     public SpriteRenderer graphics;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +37,7 @@ public class Player : MonoBehaviour
             if (currentHealth<=0){
                 healthBar.SetHealth(0);
                 Die();
+                return;
             }
             else{
                 healthBar.SetHealth(currentHealth);
@@ -49,9 +51,11 @@ public class Player : MonoBehaviour
     }
     public void Die()
     {
-        ChaseAI.instance.setChaseActive(false);
-        PlayerMovement.instance.setMovementActive(false);
+        PlayerMovement.instance.enabled=false;
+        PlayerMovement.instance.playerCollider.enabled = false;
+        isInvincible=true;
         GameOverManager.instance.gameOver();
+
     }
     public IEnumerator invincibilityFlash()
     {
