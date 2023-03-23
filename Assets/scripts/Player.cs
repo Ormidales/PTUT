@@ -1,10 +1,18 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
-public class Player : MonoBehaviour
+public class Player : Entity
 {
-    public int maxHealth = 100;
-    public int currentHealth;
+    
+
+    public Player() {
+        HealthTop = 100;
+
+    }
+
+    PlayerMovement playerMovement;
+
     public HealthBar healthBar;
     public bool isInvincible=false;
     public float invicibilityFlash=0.1f;
@@ -12,35 +20,38 @@ public class Player : MonoBehaviour
     public SpriteRenderer graphics;
     
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        base.Start();
+        playerMovement = GetComponent<PlayerMovement>();
+        healthBar.SetMaxHealth(HealthTop);
+        OnHealthChanged += (data) => {
+            healthBar.SetHealth(data.Health);
+        };
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
+        base.Update();
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            TakeDamage(100);
+            Damage(100,null);
         }
     }
 
     
 
-    public void TakeDamage(int damage)
+
+    public override void Damage(int damage,Entity x)
     {
         if (!isInvincible)
         {
-            currentHealth -= damage;
-            if (currentHealth<=0){
-                healthBar.SetHealth(0);
+            Health -= damage;
+            if (Health<=0){
                 Die();
-                return;
             }
             else{
-                healthBar.SetHealth(currentHealth);
                 isInvincible=true;
                 StartCoroutine(invincibilityFlash());
                 StartCoroutine(handleInvincibilityDelay());
@@ -51,8 +62,9 @@ public class Player : MonoBehaviour
     }
     public void Die()
     {
-        PlayerMovement.instance.enabled=false;
-        PlayerMovement.instance.playerCollider.enabled = false;
+        // TODO
+        playerMovement.enabled=false;
+        //playerMovement.rb = false;
         isInvincible=true;
         GameOverManager.instance.gameOver();
 
