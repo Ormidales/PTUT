@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
         {
             TakeDamage(20);
         }
+        healthBar.SetHealth(currentHealth);
     }
 
     void TakeDamage(int damage)

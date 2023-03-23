@@ -11,5 +11,7 @@ public class HealthBuff : PowerupEffect
     public override void Apply(GameObject target)
     {
         target.GetComponent<Player>().currentHealth += amount;
+        if (target.GetComponent<Player>().currentHealth > 100)
+            target.GetComponent<Player>().currentHealth = 100;
     }
 }
