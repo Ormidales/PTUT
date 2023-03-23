@@ -57,6 +57,13 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            MenuPauseManager.instance.menuPause();  
+            Time.timeScale = 0; 
+        }
+
+
         if (movement.sqrMagnitude >= 1)
         {
             //sprite.flipX = movement.x < 0f;

@@ -26,6 +26,10 @@ public class Gun : Weapon
         if(cooldown == 0) {
             Instantiate(Projectile, player.gameObject.transform.position + direction, Quaternion.AngleAxis(90,new Vector3(0,0,1))).GetComponent<Projectile>().Direction = direction;
 
+
+
+
+
             cooldown = Cooldown;
         }
 
