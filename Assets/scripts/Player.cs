@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public HealthBar healthBar;
     public bool isInvincible=false;
     public float invicibilityFlash=0.1f;
-    public float invicibilityTime=2f;
+    public float invicibilityTime=1f;
     public SpriteRenderer graphics;
     
     // Start is called before the first frame update
@@ -25,6 +25,12 @@ public class Player : MonoBehaviour
         {
             TakeDamage(100);
         }
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            MenuPauseManager.instance.menuPause();  
+            Time.timeScale = 0; 
+        }
+        healthBar.SetHealth(currentHealth);
     }
 
     
