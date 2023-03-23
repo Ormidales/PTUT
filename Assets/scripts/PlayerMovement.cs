@@ -47,7 +47,11 @@ public class PlayerMovement : MonoBehaviour
         {
 
 
-            Instantiate(bullet, this.gameObject.transform.position + new Vector3(player.Flipped ? 1 : -1, 0, 0), Quaternion.AngleAxis(90,new Vector3(0,0,1))).GetComponent<Projectile>().Direction = new Vector3(player.Flipped ? 1 : -1,0,0) ;
+            //Instantiate(bullet, this.gameObject.transform.position + new Vector3(player.Flipped ? 1 : -1, 0, 0), Quaternion.AngleAxis(90,new Vector3(0,0,1))).GetComponent<Projectile>().Direction = new Vector3(player.Flipped ? 1 : -1,0,0) ;
+
+
+            this.GetComponentsInChildren<Gun>(false)[0].Fire(new Vector3(player.Flipped ? 1 : -1, 0, 0));
+
 
 
         }

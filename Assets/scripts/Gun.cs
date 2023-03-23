@@ -11,17 +11,20 @@ public class Gun : Weapon
     }
 
 
+
+    public Player player;
+
     [field:SerializeField]
     public int Cooldown {get;set;}
 
-    int cooldown = 0;
+    int cooldown = 10;
 
 
-    public virtual bool Fire(Vector2 direction) {
+    public virtual bool Fire(Vector3 direction) {
 
 
         if(cooldown == 0) {
-            Instantiate(Projectile,transform.position,Quaternion.identity);
+            Instantiate(Projectile, player.gameObject.transform.position + direction, Quaternion.AngleAxis(90,new Vector3(0,0,1))).GetComponent<Projectile>().Direction = direction;
 
             cooldown = Cooldown;
         }
@@ -29,7 +32,9 @@ public class Gun : Weapon
         return true;
     }
 
-    public Projectile Projectile {get;set;}
+
+    [field:SerializeField]
+    public GameObject Projectile {get;set;}
 
     // Update is called once per frame
     protected override void Update()
