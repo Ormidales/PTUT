@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class menuController : MonoBehaviour
+public class MenuController : MonoBehaviour
 {
     public void StartGame()
     {
         // Charge la première scène de jeu
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void QuitGame()

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class endlevel : MonoBehaviour
+public class Endlevel : MonoBehaviour
 {
     public int sceneId; 
 
