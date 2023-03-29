@@ -2,32 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : Entity
 {
     public int damageOnCollision;
-    public int maxHealth = 50;
-    public int currentHealth;
+
     private Collider2D triggerCollider;
 
-    void Start()
+    protected override void Start()
     {
-        currentHealth = maxHealth;
+        base.Start();
         triggerCollider = GetComponent<Collider2D>();
         triggerCollider.isTrigger = true; // activer le trigger
     }
 
-    public void TakeDamage(int damage)
-    {
-       currentHealth -= damage;
-        
+    
 
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
-    }
-
-    void Die()
+    public override void Die()
     {
         Debug.Log("Mort de l'enemie");
         Destroy(gameObject);   
@@ -50,7 +40,7 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider){
         if (collider.CompareTag("Player")){
             Player player = collider.GetComponent<Player>();
-            player.TakeDamage(damageOnCollision);
+            player.Damage(damageOnCollision,null);
             StartCoroutine(Backoff());
         }
     }
