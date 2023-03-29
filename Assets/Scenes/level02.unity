@@ -1307,9 +1307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbef4770fa130014c827e84d63e0b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <HealthTop>k__BackingField: 100
   damageOnCollision: 20
-  maxHealth: 50
-  currentHealth: 0
 --- !u!61 &429741727
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1598,7 +1597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6000858631424065746, guid: d720a885668abfa4882fdc6b07eb1909, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 30.100006
+      value: 30.099976
       objectReference: {fileID: 0}
     - target: {fileID: 6000858631424065746, guid: d720a885668abfa4882fdc6b07eb1909, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1904,6 +1903,53 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &910845454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 910845455}
+  - component: {fileID: 910845456}
+  m_Layer: 0
+  m_Name: Gun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &910845455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910845454}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1793212155}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &910845456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910845454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe0c8bfd3bfe4a25c8001a64e3165eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1793212150}
+  <Cooldown>k__BackingField: 0
+  <Projectile>k__BackingField: {fileID: 1389948564880281968, guid: 635f28c10153f6c0eb4838a4b6e07d18, type: 3}
 --- !u!1 &980879991
 GameObject:
   m_ObjectHideFlags: 0
@@ -4906,7 +4952,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6102513df5505ad4e91d3908996f88d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leNiveauEstUnWagon: 1
 --- !u!224 &1166479549 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 654214821029471746, guid: 526a8ff928a963a4596ebeb0799c98e6, type: 3}
@@ -6098,7 +6143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 7
   rb: {fileID: 1793212146}
-  playerCollider: {fileID: 1793212147}
+  bullet: {fileID: 0}
 --- !u!114 &1793212149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6154,8 +6199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a844488efc35ba4da6ef04c12be1d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  <HealthTop>k__BackingField: 100
   healthBar: {fileID: 1793212149}
   isInvincible: 0
   invicibilityFlash: 0.3
@@ -6270,6 +6314,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1710188384}
+  - {fileID: 910845455}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
