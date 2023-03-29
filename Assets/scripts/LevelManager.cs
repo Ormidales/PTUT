@@ -21,20 +21,19 @@ public class LevelManager : MonoBehaviour
     
     public string getNextLevel(bool inWagon)
     {
-        if(inWagon)
+        if(numberOfWagonsDone<numberOfWagons)
         {
-            //lancer la map gare
-            return "station01";
-        }
-        else
-        {
-            //lancer le prochain wagon
-            if(numberOfWagonsDone<numberOfWagons)
+            if(inWagon)
+            {
+                //lancer la map gare
+                return "station01";
+            }
+            else
             {
                 numberOfWagonsDone++;
                 string res = "level0"+Random.Range(1,3);
                 return res;
-            } 
+            }
         }
         return "menu";
     }
