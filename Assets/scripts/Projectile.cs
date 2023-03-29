@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Projectile : MonoBehaviour
 {
@@ -36,11 +37,17 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision) {
 
+        
+
         var et = collision.gameObject.GetComponent<Entity>();
         if(et != null) {
             et.Damage(Damage,null);
         }
+        else if(!collision.isTrigger) {
+
+        }
         else {
+            return;
             //Debug.LogWarning("Not an entity " + collision.gameObject);
         }
         Destroy(transform.GetChild(0).gameObject);

@@ -8,9 +8,11 @@ public class PowerUp : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-
-        Destroy(gameObject);
-        powerUpEffect.Apply(other.gameObject);
+        if (other.GetComponent<Player>() != null)
+        {
+            Destroy(gameObject);
+            powerUpEffect.Apply(other.gameObject);
+        }
     }
 
 }
