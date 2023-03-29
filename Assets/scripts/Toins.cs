@@ -22,6 +22,7 @@ public class Toins : MonoBehaviour
             ScoreNum += 1;
             Destroy(Coin.gameObject); 
             MyScoreText.text = ScoreNum.ToString();
+            AudioManager.Instance.PlaySFX("buff");
         }
     }
 }

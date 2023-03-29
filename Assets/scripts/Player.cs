@@ -48,6 +48,7 @@ public class Player : Entity
         if (!isInvincible)
         {
             Health -= damage;
+            AudioManager.Instance.PlaySFX("player_hurt");
             if (Health<=0){
                 Die();
             }
@@ -67,6 +68,7 @@ public class Player : Entity
         //playerMovement.rb = false;
         isInvincible=true;
         GameOverManager.instance.gameOver();
+        AudioManager.Instance.PlaySFX("player_die");
 
     }
     public IEnumerator invincibilityFlash()

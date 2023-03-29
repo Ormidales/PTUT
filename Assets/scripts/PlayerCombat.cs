@@ -22,6 +22,7 @@ public class PlayerCombat : MonoBehaviour
         {
             Attack();
             timer = Time.time;
+            AudioManager.Instance.PlaySFX("kick");
         }
         ChangeAttackSide();
     }

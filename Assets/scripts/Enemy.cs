@@ -5,6 +5,8 @@ using UnityEngine;
 public class Enemy : Entity
 {
     public int damageOnCollision;
+    public AudioSource enemyAudioSource;
+    public AudioClip deathSound;
 
     private Collider2D triggerCollider;
 
@@ -19,6 +21,7 @@ public class Enemy : Entity
 
     public override void Die()
     {
+        AudioManager.Instance.PlaySFX("zombie_die");
         Debug.Log("Mort de l'enemie");
         Destroy(gameObject);   
     }

@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
 
             this.GetComponentsInChildren<Gun>(false)[0].Fire(new Vector3(player.Flipped ? 1 : -1, 0, 0));
 
-
+            AudioManager.Instance.PlaySFX("shot");
 
         }
 
