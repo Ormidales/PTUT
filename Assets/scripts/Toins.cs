@@ -8,10 +8,21 @@ public class Toins : MonoBehaviour
     public Text MyScoreText;
     private int ScoreNum;
 
+    public static Toins instance;
+    
+    private void Awake()
+    {
+        if (instance!=null)
+        {
+            Debug.LogWarning("Only one instance of Toins is expected !");
+            return;
+        }
+        instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
-        ScoreNum = 0;
+        ScoreNum = 50;
         MyScoreText.text = ScoreNum.ToString();
     }
 
@@ -23,5 +34,14 @@ public class Toins : MonoBehaviour
             Destroy(Coin.gameObject); 
             MyScoreText.text = ScoreNum.ToString();
         }
+    }
+    public int getToins()
+    {
+        return ScoreNum;
+    }
+    public void setToins(int toins)
+    {
+        ScoreNum=toins;
+        MyScoreText.text = ScoreNum.ToString();
     }
 }
