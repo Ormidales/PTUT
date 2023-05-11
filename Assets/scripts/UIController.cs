@@ -40,7 +40,8 @@ public class UIController : MonoBehaviour
     public static KeyCode Shoot = KeyCode.UpArrow;
 
 
-
-
-
+    public void ToggleFullscreen()
+    {
+        Screen.fullScreen = !Screen.fullScreen;
+    }
 }
