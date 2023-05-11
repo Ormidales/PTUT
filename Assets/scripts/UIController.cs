@@ -23,4 +23,9 @@ public class UIController : MonoBehaviour
     {
         AudioManager.Instance.SFXVolume(_sfxSlider.value);
     }
+    
+    public void ToggleFullscreen()
+    {
+        Screen.fullScreen = !Screen.fullScreen;
+    }
 }
