@@ -32,14 +32,16 @@ public class PlayerMovement : MonoBehaviour
 
 
 
+
+
     }
 
 
     // Update is called once per frame
     protected void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        movement.x = Input.GetKey(UIController.Left) ? -1 : Input.GetKey(UIController.Right) ? 1 : 0; //Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetKey(UIController.Up) ? 1 : Input.GetKey(UIController.Down) ? -1 : 0;
 
 
 
@@ -57,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        if(Input.GetKeyDown(KeyCode.P))
+        if(Input.GetKeyDown(KeyCode.F))
         {
             MenuPauseManager.instance.menuPause();  
             Time.timeScale = 0; 

@@ -23,4 +23,24 @@ public class UIController : MonoBehaviour
     {
         AudioManager.Instance.SFXVolume(_sfxSlider.value);
     }
+
+
+    public static KeyCode Up = KeyCode.UpArrow;
+
+    public static KeyCode Down = KeyCode.DownArrow;
+
+
+    public static KeyCode Left = KeyCode.LeftArrow;
+
+    public static KeyCode Right = KeyCode.RightArrow;
+
+
+    public static KeyCode Punch = KeyCode.UpArrow;
+
+    public static KeyCode Shoot = KeyCode.UpArrow;
+
+
+
+
+
 }
