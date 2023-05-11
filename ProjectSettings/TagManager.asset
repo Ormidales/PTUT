@@ -3,12 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Toins
+  - Image
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ennemi
   - Water
   - UI
   - 
