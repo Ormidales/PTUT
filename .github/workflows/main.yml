@@ -7,33 +7,7 @@ jobs:
     name: Build my project ✨
     runs-on: windows-latest
     steps:
-      # Checkout
-      - name: Checkout repository
-        uses: actions/checkout@v2
-        with:
-          lfs: true
-
-      # Cache
-      - uses: actions/cache@v2
-        with:
-          path: Library
-          key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
-          restore-keys: |
-            Library-
-
-      # Test
-      - name: Run tests
-        uses: game-ci/unity-test-runner@v2
- 
-
-      # Build
-      - name: Build project
-        uses: game-ci/unity-builder@v2
-        with:
-          targetPlatform: WebGL
-
-      # Output
-      - uses: actions/upload-artifact@v2
-        with:
-          name: Build
-          path: build
+      - name: Unity - Test runner
+        # You may pin to the exact commit or the version.
+        # uses: game-ci/unity-test-runner@be0f55d3cf3dc7289e580d5f8b20a5b49d2a2d3b
+        uses: game-ci/unity-test-runner@v2.1.1
