@@ -18,7 +18,7 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F) && Time.time - timer > timeBetweenAttack)
+        if(Input.GetKeyDown(UIController.Punch) && Time.time - timer > timeBetweenAttack)
         {
             Attack();
             timer = Time.time;

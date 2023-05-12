@@ -24,6 +24,24 @@ public class UIController : MonoBehaviour
         AudioManager.Instance.SFXVolume(_sfxSlider.value);
     }
 
+    public static KeyCode? GetFromName(string name) {
+        var st = typeof(KeyCode).GetEnumNames();
+        int i =0;
+        for (; i < st.Length; i++)
+        {
+            if(st[i].ToLowerInvariant() == name.ToLowerInvariant().Trim()) {
+                i = -i;
+                break;
+            }
+        }
+
+        if(i < 0) {
+            return (KeyCode)KeyCode.Parse(typeof(KeyCode),st[-i]);
+        }
+
+        return null;
+    }
+
 
     public static KeyCode Up = KeyCode.UpArrow;
 

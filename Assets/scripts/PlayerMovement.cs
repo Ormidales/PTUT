@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(UIController.Shoot))
         {
 
 
@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        if(Input.GetKeyDown(KeyCode.F))
+        if(Input.GetKeyDown(KeyCode.P))
         {
             MenuPauseManager.instance.menuPause();  
             Time.timeScale = 0; 
