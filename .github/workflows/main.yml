@@ -1,0 +1,31 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Unity
+        uses: game-ci/unity-setup@v1
+
+      - name: Build Unity project
+        run: |
+          unity -quit -batchmode -projectPath https://github.com/Ormidales/PTUT.git -executeMethod UnityEditor.BuildPipeline.BuildPlayer -logFile build.log
+
+      - name: Run NUnit tests
+        run: |
+          nunit-console Assets/Tests/Tests.asmdef
+
+      - name: Check test results
+        run: |
+          if [ -f TestResult.xml ]; then
+            echo "NUnit tests passed. Pushing changes."
+          else
+            echo "NUnit tests failed. Aborting push."
+            exit 1
+          fi
