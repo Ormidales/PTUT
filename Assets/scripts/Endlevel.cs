@@ -9,6 +9,10 @@ public class Endlevel : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.CompareTag("Player")){
             sceneName=LevelManager.instance.getNextLevel(leNiveauEstUnWagon);
+
+            DataManager.vie=Player.instance.currentHealth;
+            DataManager.items=Inventory.instance.items;
+
             SceneManager.LoadScene(sceneName);
         }
     }
