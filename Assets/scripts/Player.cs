@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Player : MonoBehaviour
+public class Player : Entity
 {
     public int maxHealth = 100;
     public int currentHealth;
@@ -10,16 +10,28 @@ public class Player : MonoBehaviour
     public float invicibilityFlash=0.1f;
     public float invicibilityTime=1f;
     public SpriteRenderer graphics;
+
+    public static Player instance;
     
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        currentHealth = maxHealth;
+        if (instance!=null)
+        {
+            UnityEngine.Debug.LogWarning("Only one instance of Player is expected !");
+            return;
+        }
+        instance = this;
+    }
+    
+    
+    public override void Start()
+    {
+        currentHealth = DataManager.vie;
         healthBar.SetMaxHealth(maxHealth);
     }
 
-    // Update is called once per frame
-    void Update()
+    
+    public override void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
@@ -55,7 +67,17 @@ public class Player : MonoBehaviour
         }
         
     }
-    public void Die()
+
+    public void HealPlayer(int amount)
+    {
+        if (currentHealth+amount>=maxHealth){
+            currentHealth=maxHealth;
+        }else{
+            currentHealth+=amount;
+        }
+    }
+
+    public override void Die()
     {
         PlayerMovement.instance.enabled=false;
         PlayerMovement.instance.playerCollider.enabled = false;

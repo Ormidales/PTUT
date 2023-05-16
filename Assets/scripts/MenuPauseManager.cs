@@ -20,7 +20,7 @@ public class MenuPauseManager : MonoBehaviour
     
     public void bouton_reprendrePartie()
     {
-    	MenuPauseManager.instance.menuPauseArret();  
+    	menuPauseArret();  
         Time.timeScale = 1f; 
     }
 
