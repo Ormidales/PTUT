@@ -8,7 +8,7 @@ public class SpeedBuff : PowerUpEffect
       public override void Apply(GameObject target)
       {
         target.GetComponent<PlayerMovement>().moveSpeed += amount;
-        AudioManager.Instance.PlaySFX("buff");
+
       }
 
  

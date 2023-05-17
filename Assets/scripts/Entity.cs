@@ -57,10 +57,7 @@ public class Entity : MonoBehaviour
 
     public virtual void Die()
     {
-
         Destroy(this.gameObject);
-
-
     }
 
 
@@ -74,14 +71,14 @@ public class Entity : MonoBehaviour
 
 
     // Start is called before the first frame update
-    protected virtual void Start()
+    public virtual void Start()
     {
         Health = HealthTop;
         Object = gameObject;
     }
 
     // Update is called once per frame
-    protected virtual void Update()
+    public virtual void Update()
     {
         Tick();
     }

@@ -5,23 +5,30 @@ using UnityEngine;
 public class Enemy : Entity
 {
     public int damageOnCollision;
-    public AudioSource enemyAudioSource;
-    public AudioClip deathSound;
-
+    public int maxHealth = 50;
+    public int currentHealth;
     private Collider2D triggerCollider;
 
-    protected override void Start()
+    public override void Start()
     {
-        base.Start();
+        currentHealth = maxHealth;
         triggerCollider = GetComponent<Collider2D>();
         triggerCollider.isTrigger = true; // activer le trigger
     }
 
-    
+    public void TakeDamage(int damage)
+    {
+       currentHealth -= damage;
+        
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
 
     public override void Die()
     {
-        AudioManager.Instance.PlaySFX("zombie_die");
         Debug.Log("Mort de l'enemie");
         Destroy(gameObject);   
     }
@@ -43,7 +50,7 @@ public class Enemy : Entity
     private void OnTriggerEnter2D(Collider2D collider){
         if (collider.CompareTag("Player")){
             Player player = collider.GetComponent<Player>();
-            player.Damage(damageOnCollision,null);
+            player.TakeDamage(damageOnCollision);
             StartCoroutine(Backoff());
         }
     }

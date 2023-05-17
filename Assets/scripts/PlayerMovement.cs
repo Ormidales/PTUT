@@ -2,13 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
+using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     public float moveSpeed = 4f;
     public Rigidbody2D rb;
+    public BoxCollider2D playerCollider;
+
+    public static PlayerMovement instance;
+    
+    private void Awake()
+    {
+        if (instance!=null)
+        {
+            UnityEngine.Debug.LogWarning("Only one instance of PlayerMovement is expected !");
+            return;
+        }
+        instance = this;
+    }
 
     Vector2 movement;
 
@@ -26,14 +39,6 @@ public class PlayerMovement : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         player = GetComponent<Player>();
         rb = GetComponent<Rigidbody2D>();
-
-
-        print(GenerativeGrammar.Test());
-
-
-
-
-
     }
 
 
@@ -51,9 +56,12 @@ public class PlayerMovement : MonoBehaviour
 
             //Instantiate(bullet, this.gameObject.transform.position + new Vector3(player.Flipped ? 1 : -1, 0, 0), Quaternion.AngleAxis(90,new Vector3(0,0,1))).GetComponent<Projectile>().Direction = new Vector3(player.Flipped ? 1 : -1,0,0) ;
 
-
-            this.GetComponentsInChildren<Gun>(false)[0].Fire(new Vector3(player.Flipped ? 1 : -1, 0, 0));
-
+            
+            try{
+                this.GetComponentsInChildren<Gun>(false)[0].Fire(new Vector3(player.Flipped ? 1 : -1, 0, 0));
+            }catch (Exception){
+                UnityEngine.Debug.LogWarning("Pas d'arme");
+            }
             AudioManager.Instance.PlaySFX("shot");
 
         }

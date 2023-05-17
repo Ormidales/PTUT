@@ -10,9 +10,8 @@ public class HealthBuff : PowerUpEffect
 
     public override void Apply(GameObject target)
     {
-        target.GetComponent<Player>().Health += amount;
-        if (target.GetComponent<Player>().Health > 100)
-            target.GetComponent<Player>().Health = 100;
-        AudioManager.Instance.PlaySFX("buff");
+        target.GetComponent<Player>().currentHealth += amount;
+        if (target.GetComponent<Player>().currentHealth > 100)
+            target.GetComponent<Player>().currentHealth = 100;
     }
 }

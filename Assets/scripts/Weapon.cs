@@ -1,19 +1,26 @@
-using System.Buffers.Text;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : Item
-{
+public class Weapon : MonoBehaviour {
+
     // Start is called before the first frame update
-    protected override void Start()
+    protected virtual void Start()
     {
-        base.Start();
+    }
+
+
+    public Player Player {get;set;} = null;
+    
+    protected virtual void OnUse(Player player) {
+
     }
 
     // Update is called once per frame
-    protected override void Update()
+    protected virtual void Update()
     {
-        base.Update();
+        
     }
+
 }

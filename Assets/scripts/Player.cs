@@ -1,58 +1,64 @@
 using UnityEngine;
 using System.Collections;
-using System;
 
 public class Player : Entity
 {
-    
-
-    public Player() {
-        HealthTop = 100;
-
-    }
-
-    PlayerMovement playerMovement;
-
+    public int maxHealth = 100;
+    public int currentHealth;
     public HealthBar healthBar;
     public bool isInvincible=false;
     public float invicibilityFlash=0.1f;
-    public float invicibilityTime=2f;
+    public float invicibilityTime=1f;
     public SpriteRenderer graphics;
+
+    public static Player instance;
     
-    // Start is called before the first frame update
-    protected override void Start()
+    private void Awake()
     {
-        base.Start();
-        playerMovement = GetComponent<PlayerMovement>();
-        healthBar.SetMaxHealth(HealthTop);
-        OnHealthChanged += (data) => {
-            healthBar.SetHealth(data.Health);
-        };
+        if (instance!=null)
+        {
+            UnityEngine.Debug.LogWarning("Only one instance of Player is expected !");
+            return;
+        }
+        instance = this;
+    }
+    
+    
+    public override void Start()
+    {
+        currentHealth = DataManager.vie;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
-    // Update is called once per frame
-    protected override void Update()
+    
+    public override void Update()
     {
-        base.Update();
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            Damage(100,null);
+            TakeDamage(100);
         }
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            MenuPauseManager.instance.menuPause();  
+            Time.timeScale = 0; 
+        }
+        healthBar.SetHealth(currentHealth);
     }
 
     
 
-
-    public override void Damage(int damage,Entity x)
+    public void TakeDamage(int damage)
     {
         if (!isInvincible)
         {
-            Health -= damage;
-            AudioManager.Instance.PlaySFX("player_hurt");
-            if (Health<=0){
+            currentHealth -= damage;
+            if (currentHealth<=0){
+                healthBar.SetHealth(0);
                 Die();
+                return;
             }
             else{
+                healthBar.SetHealth(currentHealth);
                 isInvincible=true;
                 StartCoroutine(invincibilityFlash());
                 StartCoroutine(handleInvincibilityDelay());
@@ -61,14 +67,22 @@ public class Player : Entity
         }
         
     }
-    public void Die()
+
+    public void HealPlayer(int amount)
     {
-        // TODO
-        playerMovement.enabled=false;
-        //playerMovement.rb = false;
+        if (currentHealth+amount>=maxHealth){
+            currentHealth=maxHealth;
+        }else{
+            currentHealth+=amount;
+        }
+    }
+
+    public override void Die()
+    {
+        PlayerMovement.instance.enabled=false;
+        PlayerMovement.instance.playerCollider.enabled = false;
         isInvincible=true;
         GameOverManager.instance.gameOver();
-        AudioManager.Instance.PlaySFX("player_die");
 
     }
     public IEnumerator invincibilityFlash()

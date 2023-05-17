@@ -18,11 +18,10 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(UIController.Punch) && Time.time - timer > timeBetweenAttack)
+        if(Input.GetKeyDown(KeyCode.F) && Time.time - timer > timeBetweenAttack)
         {
             Attack();
             timer = Time.time;
-            AudioManager.Instance.PlaySFX("kick");
         }
         ChangeAttackSide();
     }
@@ -34,7 +33,7 @@ public class PlayerCombat : MonoBehaviour
         foreach(Collider2D enemy in hitEnemies)
         {
             Debug.Log("Ennemie attaqué");
-            enemy.GetComponent<Enemy>().Damage(20,null);
+            enemy.GetComponent<Enemy>().TakeDamage(20);
         }
     }
     private void ChangeAttackSide()
