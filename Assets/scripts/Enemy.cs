@@ -8,6 +8,7 @@ public class Enemy : Entity
     public int maxHealth = 50;
     public int currentHealth;
     private Collider2D triggerCollider;
+    public Animator animator;
 
     public override void Start()
     {
@@ -18,19 +19,21 @@ public class Enemy : Entity
 
     public void TakeDamage(int damage)
     {
-       currentHealth -= damage;
-        
+        currentHealth -= damage;
 
         if (currentHealth <= 0)
         {
             Die();
         }
+        StartCoroutine(cooldowndammage());
     }
 
     public override void Die()
     {
         Debug.Log("Mort de l'enemie");
-        Destroy(gameObject);   
+        animator.SetBool("Dead",true);
+        StartCoroutine(end());
+        
     }
 
     IEnumerator Backoff()
@@ -51,7 +54,28 @@ public class Enemy : Entity
         if (collider.CompareTag("Player")){
             Player player = collider.GetComponent<Player>();
             player.TakeDamage(damageOnCollision);
+            StartCoroutine(cooldownattack());
             StartCoroutine(Backoff());
         }
     }
+
+    public IEnumerator end()
+    {
+        yield return new WaitForSeconds(0.9f);
+        Destroy(gameObject);
+    }
+    public IEnumerator cooldowndammage()
+    {
+        yield return new WaitForSeconds(0.5f);
+        animator.SetBool("Dammage",true);
+        yield return new WaitForSeconds(0.1f);
+        animator.SetBool("Dammage",false);
+    }
+    public IEnumerator cooldownattack()
+    {
+        animator.SetBool("Attack",true);
+        yield return new WaitForSeconds(0.1f);
+        animator.SetBool("Attack",false);
+    }
+    
 }

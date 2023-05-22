@@ -51,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
         movement.y = Input.GetKey(UIController.Up) ? 1 : Input.GetKey(UIController.Down) ? -1 : 0;
 
         animator.SetFloat("Speed",movement.sqrMagnitude);
+        
 
         if (Input.GetKeyDown(UIController.Shoot))
         {

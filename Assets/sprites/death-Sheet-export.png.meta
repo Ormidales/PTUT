@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 816c4d9a3876c524abc0d600f03cc017
+guid: d4181a4e6a3f39c4e9112dc38e4cc93f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -67,8 +67,8 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
-    resizeAlgorithm: 1
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
     compressionQuality: 50
@@ -105,115 +105,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: soulard1_attaque-Sheet_0
+      name: death-Sheet-export_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 59
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f07d4c3badf9df14fb3ba4c0fbb2b5a3
-      internalID: -955810035
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: soulard1_attaque-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 127
-        y: 0
-        width: 59
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8f15576c202bad4e9dbdcf70126fbbb
-      internalID: 929624969
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: soulard1_attaque-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 258
-        y: 0
-        width: 56
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0369ab74cd6bd814ba7707c20856a830
-      internalID: 1579580203
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: soulard1_attaque-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 84
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 15dd3e6db08b0f24884afffab9094811
-      internalID: 259523717
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: soulard1_attaque-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 513
-        y: 0
-        width: 77
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8007983c97cfb5a468ef955ac5bc97de
-      internalID: 2095410371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: soulard1_attaque-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 647
         y: 0
         width: 128
         height: 128
@@ -224,19 +119,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e726534e929d25c4c9449af69d6bdb24
-      internalID: -1739733814
+      spriteID: 1afdb8048e8b9424587fce4b7bbe9e15
+      internalID: 740282115
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soulard1_attaque-Sheet_6
+      name: death-Sheet-export_1
       rect:
         serializedVersion: 2
-        x: 784
+        x: 128
         y: 0
-        width: 116
+        width: 128
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -245,19 +140,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f79efe7ae331d6b43ae0a7d5fa6c1568
-      internalID: -1908070035
+      spriteID: 37d0433bd45765f41a0641df2293061b
+      internalID: -2145302539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soulard1_attaque-Sheet_7
+      name: death-Sheet-export_2
       rect:
         serializedVersion: 2
-        x: 912
+        x: 256
         y: 0
-        width: 112
+        width: 128
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -266,19 +161,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dae68c24018bb6c488e620d2ef954d15
-      internalID: -1887781545
+      spriteID: 874683f87e86062408014c700aabc8c7
+      internalID: 2131720055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soulard1_attaque-Sheet_8
+      name: death-Sheet-export_3
       rect:
         serializedVersion: 2
-        x: 1030
+        x: 384
         y: 0
-        width: 76
+        width: 128
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -287,19 +182,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a51b4cf894ee564a95060e6518d47e9
-      internalID: 1432983712
+      spriteID: 2cf51d8c5bb2dbc4cbcbd82457922b27
+      internalID: -740295706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soulard1_attaque-Sheet_9
+      name: death-Sheet-export_4
       rect:
         serializedVersion: 2
-        x: 1151
+        x: 512
         y: 0
-        width: 79
+        width: 128
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -308,19 +203,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b76f057f4fc53ba40be22ba9abc1c000
-      internalID: -1180261943
+      spriteID: 65050f0983121ec4fa81301b8c038b31
+      internalID: -87954747
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soulard1_attaque-Sheet_10
+      name: death-Sheet-export_5
       rect:
         serializedVersion: 2
-        x: 1276
+        x: 640
         y: 0
-        width: 79
+        width: 128
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -329,19 +224,124 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1b4d515369d2f247bdb5f0d66c6d5da
-      internalID: -1679342897
+      spriteID: 515d09d0e84dc3f47ac41ca0d9de8c43
+      internalID: -717439559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soulard1_attaque-Sheet_11
+      name: death-Sheet-export_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec537c7d0943134ab7a8f739de97b0f
+      internalID: 1929920632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-Sheet-export_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8350763213177924480d464a08d88981
+      internalID: -2091724131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-Sheet-export_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3562d3a04cd5f5147b4c118617985e52
+      internalID: 419237137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-Sheet-export_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1f331cb77ee27f49878fc263e03f3b3
+      internalID: -1518281008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-Sheet-export_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae28d6d91acd0a040a2467dc72cec1f7
+      internalID: 439520060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-Sheet-export_11
       rect:
         serializedVersion: 2
         x: 1408
         y: 0
-        width: 71
+        width: 128
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -350,8 +350,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c0d89449d91d6542b68d9505eba99c7
-      internalID: -700708740
+      spriteID: e490eeb62613af14ca675c5f03a84054
+      internalID: -1892486344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-Sheet-export_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf2308d654c9ba429b5697b8aca1b74
+      internalID: 979651521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-Sheet-export_13
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74efb78c69b3cd244ad9e4db91c8a010
+      internalID: 476149808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-Sheet-export_14
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42aba3c6657a22d4e850cbf31a9bd83c
+      internalID: 1646454949
       vertices: []
       indices: 
       edges: []
@@ -367,18 +430,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      soulard1_attaque-Sheet_0: -955810035
-      soulard1_attaque-Sheet_1: 929624969
-      soulard1_attaque-Sheet_10: -1679342897
-      soulard1_attaque-Sheet_11: -700708740
-      soulard1_attaque-Sheet_2: 1579580203
-      soulard1_attaque-Sheet_3: 259523717
-      soulard1_attaque-Sheet_4: 2095410371
-      soulard1_attaque-Sheet_5: -1739733814
-      soulard1_attaque-Sheet_6: -1908070035
-      soulard1_attaque-Sheet_7: -1887781545
-      soulard1_attaque-Sheet_8: 1432983712
-      soulard1_attaque-Sheet_9: -1180261943
+      death-Sheet-export_0: 740282115
+      death-Sheet-export_1: -2145302539
+      death-Sheet-export_10: 439520060
+      death-Sheet-export_11: -1892486344
+      death-Sheet-export_12: 979651521
+      death-Sheet-export_13: 476149808
+      death-Sheet-export_14: 1646454949
+      death-Sheet-export_2: 2131720055
+      death-Sheet-export_3: -740295706
+      death-Sheet-export_4: -87954747
+      death-Sheet-export_5: -717439559
+      death-Sheet-export_6: 1929920632
+      death-Sheet-export_7: -2091724131
+      death-Sheet-export_8: 419237137
+      death-Sheet-export_9: -1518281008
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

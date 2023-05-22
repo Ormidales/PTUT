@@ -11,6 +11,7 @@ public class Player : Entity
     public float invicibilityTime=1f;
     public SpriteRenderer graphics;
     public GameObject defenseItem;
+    public Animator animator;
 
     public static Player instance;
     
@@ -80,10 +81,10 @@ public class Player : Entity
 
     public override void Die()
     {
+        animator.SetBool("End",true);
         PlayerMovement.instance.enabled=false;
         PlayerMovement.instance.playerCollider.enabled = false;
-        isInvincible=true;
-        GameOverManager.instance.gameOver();
+        StartCoroutine(end());
 
     }
     public IEnumerator invincibilityFlash()
@@ -122,11 +123,17 @@ public class Player : Entity
         while(isInvincible)
         {
             defenseItem.GetComponent<SpriteRenderer>().color  = new Color(0.5f,0.5f,0.7f,0.5f);
-            defenseItem.GetComponent<Transform>().localScale -= new Vector3(0.5f, 0.5f, 0f);
+            defenseItem.GetComponent<Transform>().localScale -= new Vector3(0.2f, 0.2f, 0f);
             yield return new WaitForSeconds(0.2f);
             defenseItem.GetComponent<SpriteRenderer>().color = new Color(0.5f,0.5f,0.7f,0.4f);
-            defenseItem.GetComponent<Transform>().localScale += new Vector3(0.5f, 0.5f, 0f);
+            defenseItem.GetComponent<Transform>().localScale += new Vector3(0.2f, 0.2f, 0f);
             yield return new WaitForSeconds(0.2f);
         }
+    }
+    public IEnumerator end()
+    {
+        yield return new WaitForSeconds(1.1f);
+        graphics.color = new Color(1f,1f,1f,0f);
+        GameOverManager.instance.gameOver();
     }
 }

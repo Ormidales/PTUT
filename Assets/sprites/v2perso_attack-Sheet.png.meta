@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 816c4d9a3876c524abc0d600f03cc017
+guid: e6ce4270b2904de48807ba13d4a0bcf3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -67,8 +67,8 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
-    resizeAlgorithm: 1
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
     compressionQuality: 50
@@ -105,115 +105,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: soulard1_attaque-Sheet_0
+      name: v2perso_attack-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 59
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f07d4c3badf9df14fb3ba4c0fbb2b5a3
-      internalID: -955810035
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: soulard1_attaque-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 127
-        y: 0
-        width: 59
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8f15576c202bad4e9dbdcf70126fbbb
-      internalID: 929624969
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: soulard1_attaque-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 258
-        y: 0
-        width: 56
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0369ab74cd6bd814ba7707c20856a830
-      internalID: 1579580203
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: soulard1_attaque-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 84
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 15dd3e6db08b0f24884afffab9094811
-      internalID: 259523717
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: soulard1_attaque-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 513
-        y: 0
-        width: 77
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8007983c97cfb5a468ef955ac5bc97de
-      internalID: 2095410371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: soulard1_attaque-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 647
         y: 0
         width: 128
         height: 128
@@ -224,19 +119,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e726534e929d25c4c9449af69d6bdb24
-      internalID: -1739733814
+      spriteID: 5a07ebc0c7e71b14bb2a0ce30880b163
+      internalID: -191349158
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soulard1_attaque-Sheet_6
+      name: v2perso_attack-Sheet_1
       rect:
         serializedVersion: 2
-        x: 784
+        x: 128
         y: 0
-        width: 116
+        width: 128
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -245,19 +140,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f79efe7ae331d6b43ae0a7d5fa6c1568
-      internalID: -1908070035
+      spriteID: cd23d68d9721c0f4a944bd51bd8d618c
+      internalID: -2061851500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soulard1_attaque-Sheet_7
+      name: v2perso_attack-Sheet_2
       rect:
         serializedVersion: 2
-        x: 912
+        x: 256
         y: 0
-        width: 112
+        width: 128
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -266,19 +161,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dae68c24018bb6c488e620d2ef954d15
-      internalID: -1887781545
+      spriteID: d3a204719611c254395851281b00d8ed
+      internalID: 2044903542
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soulard1_attaque-Sheet_8
+      name: v2perso_attack-Sheet_3
       rect:
         serializedVersion: 2
-        x: 1030
+        x: 384
         y: 0
-        width: 76
+        width: 128
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -287,19 +182,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a51b4cf894ee564a95060e6518d47e9
-      internalID: 1432983712
+      spriteID: 422832f2e277e954087299203af7d167
+      internalID: -219917271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soulard1_attaque-Sheet_9
+      name: v2perso_attack-Sheet_4
       rect:
         serializedVersion: 2
-        x: 1151
+        x: 512
         y: 0
-        width: 79
+        width: 128
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -308,19 +203,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b76f057f4fc53ba40be22ba9abc1c000
-      internalID: -1180261943
+      spriteID: 11da10afc42cc574395274fca873e473
+      internalID: 1521913596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soulard1_attaque-Sheet_10
+      name: v2perso_attack-Sheet_5
       rect:
         serializedVersion: 2
-        x: 1276
+        x: 640
         y: 0
-        width: 79
+        width: 128
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -329,19 +224,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1b4d515369d2f247bdb5f0d66c6d5da
-      internalID: -1679342897
+      spriteID: 48b3055e1dd16894c98be65aacd67412
+      internalID: 823973203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soulard1_attaque-Sheet_11
+      name: v2perso_attack-Sheet_6
       rect:
         serializedVersion: 2
-        x: 1408
+        x: 768
         y: 0
-        width: 71
+        width: 128
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -350,8 +245,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c0d89449d91d6542b68d9505eba99c7
-      internalID: -700708740
+      spriteID: 54241446a694c4d4298c15cae2e9ad72
+      internalID: 1398614263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v2perso_attack-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2044aa0a635c5a546953f0b96b330c1c
+      internalID: -1105136364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v2perso_attack-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09245cc9214075f459aa6a13877f5433
+      internalID: -275389061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v2perso_attack-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a930f8944d2a0bc49b68f4decc6f6d55
+      internalID: 1792532423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v2perso_attack-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93530687d825f8f45b0ae39ccb8c1c6c
+      internalID: -1798051995
       vertices: []
       indices: 
       edges: []
@@ -367,18 +346,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      soulard1_attaque-Sheet_0: -955810035
-      soulard1_attaque-Sheet_1: 929624969
-      soulard1_attaque-Sheet_10: -1679342897
-      soulard1_attaque-Sheet_11: -700708740
-      soulard1_attaque-Sheet_2: 1579580203
-      soulard1_attaque-Sheet_3: 259523717
-      soulard1_attaque-Sheet_4: 2095410371
-      soulard1_attaque-Sheet_5: -1739733814
-      soulard1_attaque-Sheet_6: -1908070035
-      soulard1_attaque-Sheet_7: -1887781545
-      soulard1_attaque-Sheet_8: 1432983712
-      soulard1_attaque-Sheet_9: -1180261943
+      v2perso_attack-Sheet_0: -191349158
+      v2perso_attack-Sheet_1: -2061851500
+      v2perso_attack-Sheet_10: -1798051995
+      v2perso_attack-Sheet_2: 2044903542
+      v2perso_attack-Sheet_3: -219917271
+      v2perso_attack-Sheet_4: 1521913596
+      v2perso_attack-Sheet_5: 823973203
+      v2perso_attack-Sheet_6: 1398614263
+      v2perso_attack-Sheet_7: -1105136364
+      v2perso_attack-Sheet_8: -275389061
+      v2perso_attack-Sheet_9: 1792532423
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

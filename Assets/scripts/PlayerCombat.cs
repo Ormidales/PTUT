@@ -13,13 +13,17 @@ public class PlayerCombat : MonoBehaviour
     private float timeBetweenAttack = 0.75f;
     private float timer = 0;
 
+    public Animator animator;
+
     public LayerMask enemyLayers;
 
     // Update is called once per frame
     void Update()
     {
+        animator.SetBool("Attack",false);
         if(Input.GetKeyDown(KeyCode.F) && Time.time - timer > timeBetweenAttack)
         {
+            animator.SetBool("Attack",true);
             Attack();
             timer = Time.time;
         }
