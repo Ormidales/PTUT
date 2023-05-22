@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b1ded57b6275ace438a344066c7ab8a4
+guid: d0033e7d3b462df46888f1d73adfe92d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,211 +105,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: v2perso_walk-Sheet_0
+      name: soulard1_walk-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
+        width: 64
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75ed88ee05d3edb4a82e3351ceee9f16
-      internalID: -652660835
+      spriteID: 4d092a45af059c2429fe6ae6b4c8a833
+      internalID: -454730129
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: v2perso_walk-Sheet_1
+      name: soulard1_walk-Sheet_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 129
         y: 0
-        width: 128
+        width: 64
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7128553b3c54cfd42be44f7436fb434b
-      internalID: 1273868753
+      spriteID: 4480e84fec2af394db75a5b7cee7fa5f
+      internalID: 1572839407
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: v2perso_walk-Sheet_2
+      name: soulard1_walk-Sheet_2
       rect:
         serializedVersion: 2
         x: 256
         y: 0
-        width: 128
+        width: 64
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b54693007f7b9840bbbaeb1a5909e65
-      internalID: 716051648
+      spriteID: ccc6729240d4a8542a60e41b8f679d8d
+      internalID: 1497379818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: v2perso_walk-Sheet_3
+      name: soulard1_walk-Sheet_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 382
         y: 0
-        width: 128
+        width: 64
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96e9907d15ec63c44a057062c5d94589
-      internalID: -962320500
+      spriteID: a62c12920a404a245a41dc4fe517b871
+      internalID: 1002698669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: v2perso_walk-Sheet_4
+      name: soulard1_walk-Sheet_4
       rect:
         serializedVersion: 2
-        x: 512
+        x: 508
         y: 0
-        width: 128
+        width: 64
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00a5ec775cb254944917694bc1a34e2a
-      internalID: 1365107085
+      spriteID: f37331a54472e1b49893c1bd1c90cf77
+      internalID: -199942821
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: v2perso_walk-Sheet_5
+      name: soulard1_walk-Sheet_5
       rect:
         serializedVersion: 2
         x: 640
         y: 0
-        width: 128
+        width: 64
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd1dfbb3fe463554fa7c34c865b097f1
-      internalID: -237602927
+      spriteID: ecd5ba0ff57219d49993edf8a804c8cf
+      internalID: 127074582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: v2perso_walk-Sheet_6
+      name: soulard1_walk-Sheet_6
       rect:
         serializedVersion: 2
-        x: 768
+        x: 762
         y: 0
-        width: 128
+        width: 80
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9020292ac5f4ea409851b65d9311b70
-      internalID: 1349914508
+      spriteID: 272514d3740763745b338a6dd65e1041
+      internalID: 1206209281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: v2perso_walk-Sheet_7
+      name: soulard1_walk-Sheet_7
       rect:
         serializedVersion: 2
-        x: 896
+        x: 892
         y: 0
-        width: 128
+        width: 80
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3a446fcefdde434683f574d48890902
-      internalID: 1968228310
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: v2perso_walk-Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d22918b02ed23b7418c6f0172581be92
-      internalID: -1113051388
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: v2perso_walk-Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 1152
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e9bdbcaa92694d428bb505b334a4f82
-      internalID: 1232666090
+      spriteID: 84748cede71bb044abe7410e934ce30e
+      internalID: 995785517
       vertices: []
       indices: 
       edges: []
@@ -325,16 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      v2perso_walk-Sheet_0: -652660835
-      v2perso_walk-Sheet_1: 1273868753
-      v2perso_walk-Sheet_2: 716051648
-      v2perso_walk-Sheet_3: -962320500
-      v2perso_walk-Sheet_4: 1365107085
-      v2perso_walk-Sheet_5: -237602927
-      v2perso_walk-Sheet_6: 1349914508
-      v2perso_walk-Sheet_7: 1968228310
-      v2perso_walk-Sheet_8: -1113051388
-      v2perso_walk-Sheet_9: 1232666090
+      soulard1_walk-Sheet_0: -454730129
+      soulard1_walk-Sheet_1: 1572839407
+      soulard1_walk-Sheet_2: 1497379818
+      soulard1_walk-Sheet_3: 1002698669
+      soulard1_walk-Sheet_4: -199942821
+      soulard1_walk-Sheet_5: 127074582
+      soulard1_walk-Sheet_6: 1206209281
+      soulard1_walk-Sheet_7: 995785517
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

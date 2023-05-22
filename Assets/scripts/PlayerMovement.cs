@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public BoxCollider2D playerCollider;
 
+    public Animator animator;
+
     public static PlayerMovement instance;
     
     private void Awake()
@@ -48,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetKey(UIController.Left) ? -1 : Input.GetKey(UIController.Right) ? 1 : 0; //Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetKey(UIController.Up) ? 1 : Input.GetKey(UIController.Down) ? -1 : 0;
 
-
+        animator.SetFloat("Speed",movement.sqrMagnitude);
 
         if (Input.GetKeyDown(UIController.Shoot))
         {
@@ -90,14 +92,6 @@ public class PlayerMovement : MonoBehaviour
                 player.Flipped = flip;
 
             }
-
-
-
-
-
-
-
-
         }
 
 
