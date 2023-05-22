@@ -9,18 +9,31 @@ public class Projectile : MonoBehaviour
 
 
     [field:SerializeField]
-    public float Speed {get;set;}= 0.5f;
+    public float Speed {get;set;}= 0.2f;
+
+
+
+
+
+    [field:SerializeField]
+    public bool Bell {get;set;} = false;
+    
+
 
 
     
 
 
+    const int FRAME = 12;
+
     [field:SerializeField]
-    public int Frames {get;set;} = 10*60;
+    public int Frames {get;set;} = 200;
 
 
     [field:SerializeField]
     public int Damage {get;set;} = 25;
+
+
 
 
     [field:SerializeField]
@@ -28,6 +41,10 @@ public class Projectile : MonoBehaviour
 
 
     Rigidbody2D body;
+
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -71,8 +88,29 @@ public class Projectile : MonoBehaviour
         if(Frames < 0) {
             Destroy(this.gameObject);
         }
+
         
+        else {
         
-        body.MovePosition(body.position + new Vector2(Direction.x,Direction.y)*Speed);
+
+
+            print(Frames + "f");
+
+
+            //body.MovePosition(body.position + new Vector2(Direction.x,Direction.y+ Mathf.Cos((1-Frames/FRAME)*Mathf.PI)*2)*Speed);
+
+
+            if(Bell) {
+
+                body.MovePosition(body.position + new Vector2(Direction.x,Mathf.Cos((1-Frames/FRAME)*Mathf.PI)*2)*Speed);
+            }
+            else {
+
+
+                body.MovePosition(body.position + new Vector2(Direction.x,Direction.y+ Mathf.Cos((1-Frames/FRAME)*Mathf.PI)*2)*Speed);
+
+
+            }
+        }
     }
 }
