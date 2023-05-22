@@ -42,13 +42,7 @@ public class TestPlayer
         slider = null;
         gradient = null;
         fill = null;
-    }
-    [UnityTest]
-    public IEnumerator invincibilityFlash()
-    {
-        // Use the Assert class to test conditions.
-        // Use yield to skip a frame.
-        yield return null;
+        GameObject.Destroy(gameObject);
     }
     
     [Test]
@@ -69,7 +63,23 @@ public class TestPlayer
         Assert.AreEqual(initialHealth-damage, player.currentHealth);
     }
     
+    [Test]
+    public void HealPlayer1()
+    {
+        
+        // Arrange
+        player.healthBar = healthBar;
+        player.currentHealth = player.maxHealth-20;
+        int initialHealth = player.currentHealth;
+        int heal = 20;
 
+        // Act
+        player.HealPlayer(heal);
+
+        // Assert
+        //Assert.AreEqual(initialHealth - damage, player.currentHealth);
+        Assert.AreEqual(initialHealth+heal, player.currentHealth);
+    }
     
 }
 

@@ -124,5 +124,17 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
+    public void speedBuffAction(int speed, float time){
+        StartCoroutine(speedBuff(speed,time));
+    }
+
+    private IEnumerator speedBuff(int speed, float time)
+    {
+        moveSpeed+=speed;
+        yield return new WaitForSeconds(time);
+        moveSpeed-=speed;
+    }
+
+
 
 }

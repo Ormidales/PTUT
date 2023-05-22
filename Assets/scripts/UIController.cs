@@ -53,9 +53,9 @@ public class UIController : MonoBehaviour
     public static KeyCode Right = KeyCode.RightArrow;
 
 
-    public static KeyCode Punch = KeyCode.UpArrow;
+    public static KeyCode Punch = KeyCode.F;
 
-    public static KeyCode Shoot = KeyCode.UpArrow;
+    public static KeyCode Shoot = KeyCode.T;
 
 
     public void ToggleFullscreen()

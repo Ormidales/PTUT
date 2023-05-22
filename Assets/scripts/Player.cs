@@ -10,6 +10,7 @@ public class Player : Entity
     public float invicibilityFlash=0.1f;
     public float invicibilityTime=1f;
     public SpriteRenderer graphics;
+    public GameObject defenseItem;
 
     public static Player instance;
     
@@ -99,5 +100,33 @@ public class Player : Entity
     {
         yield return new WaitForSeconds(invicibilityTime);
         isInvincible=false;
+    }
+
+    public void setInvincible(float time)
+    {
+        StartCoroutine(invincibility(time));
+        StartCoroutine(invincibilityUi());
+    }
+
+    public IEnumerator invincibility(float time)
+    {
+        isInvincible=true;
+        defenseItem.SetActive(true);
+        yield return new WaitForSeconds(time);
+        defenseItem.SetActive(false);
+        isInvincible=false;
+    }
+
+    public IEnumerator invincibilityUi()
+    {
+        while(isInvincible)
+        {
+            defenseItem.GetComponent<SpriteRenderer>().color  = new Color(0.5f,0.5f,0.7f,0.5f);
+            defenseItem.GetComponent<Transform>().localScale -= new Vector3(0.5f, 0.5f, 0f);
+            yield return new WaitForSeconds(0.2f);
+            defenseItem.GetComponent<SpriteRenderer>().color = new Color(0.5f,0.5f,0.7f,0.4f);
+            defenseItem.GetComponent<Transform>().localScale += new Vector3(0.5f, 0.5f, 0f);
+            yield return new WaitForSeconds(0.2f);
+        }
     }
 }

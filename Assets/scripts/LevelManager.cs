@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
 
     public static LevelManager instance;
     public int numberOfWagons=5;
-    private int numberOfWagonsDone=0;
+    public int numberOfWagonsDone=0;
 
     private void Awake()
     {
