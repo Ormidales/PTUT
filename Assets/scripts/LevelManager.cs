@@ -31,7 +31,7 @@ public class LevelManager : MonoBehaviour
             else
             {
                 numberOfWagonsDone++;
-                string res = "level0"+Random.Range(1,3);
+                string res = "level0"+Random.Range(1,2);
                 return res;
             }
         }

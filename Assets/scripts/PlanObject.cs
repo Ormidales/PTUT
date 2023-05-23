@@ -8,12 +8,12 @@ public class PlanObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spriteRenderer.sortingOrder=0-(int)(transform.position.y*10);
+        spriteRenderer.sortingOrder=0-(int)(transform.position.y*10)+100;
     }
 
     // Update is called once per frame
     void Update()
     {
-        spriteRenderer.sortingOrder=0-(int)(layer.position.y*10);
+        spriteRenderer.sortingOrder=0-(int)(layer.position.y*10)+100;
     }
 }
